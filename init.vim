@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'owickstrom/vim-colors-paramount'
 Plug 'JarrodCTaylor/spartan'
 Plug 'chriskempson/base16-vim'
+Plug 'tyrannicaltoucan/vim-quantum'
 
 " Python
 Plug 'klen/python-mode', { 'branch': 'develop', 'for': 'python' }
@@ -44,7 +45,10 @@ if (empty($TMUX))
 endif
 "colorscheme PaperColor
 "colorscheme gruvbox
-colorscheme base16-default-dark
+"colorscheme base16-default-dark
+colorscheme quantum
+let g:quantum_black=1
+let g:quantum_italics=1
 
 "colorscheme paramount  "minimal
 "colorscheme spartan
@@ -124,7 +128,7 @@ set cursorline
 " Vim-Airline
 set laststatus=2
 "let g:airline_theme='one'
-let g:airline_theme='murmur'
+let g:airline_theme='quantum'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -145,7 +149,7 @@ let g:python3_host_prog = '/usr/bin/python3.5'
 let g:pymode_rope = 1
 let g:pymode_rope_completion = 1
 let g:pymode_rope_complete_on_dot = 1
-let g:jedi#completions_enabled = 0
+let g:jedi#completions_enabled = 1
 let g:pymode_rope_guess_project=0
 " документация
 let g:pymode_doc = 0
